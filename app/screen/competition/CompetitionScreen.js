@@ -21,7 +21,7 @@ export default class Competition extends Component {
   }
 
   componentDidMount() {
-    console.log("componentDidMount");
+    console.log("Competition -> componentDidMount");
     const url = constants.API_URL + constants.COMPETITION + "/" + this.props.navigation.getParam("id", 0);
     console.log(url)
     return footballApi
@@ -36,7 +36,7 @@ export default class Competition extends Component {
   }
 
   componentDidUpdate() {
-    console.log("componentDidUpdate");
+    console.log("Competition -> componentDidUpdate");
     footballApi
       .callAPI(
         constants.COMPETITION + "/" + this.props.navigation.getParam("id", 0)

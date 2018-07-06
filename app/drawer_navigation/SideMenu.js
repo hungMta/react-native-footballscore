@@ -24,7 +24,7 @@ export default class SideMenu extends Component {
     console.log(this.state);
   }
 
-  navigateToScreen = (route, idCompetition) => () => {
+  navigateToScreen = (route, idCompetition, competition) => () => {
     const navigateAction = NavigationActions.navigate({
       routeName: route,
       params: {
@@ -93,7 +93,7 @@ export default class SideMenu extends Component {
       <View>
         <TouchableOpacity
           style={styles.navSectionStyle}
-          onPress={this.navigateToScreen(nav_screen, item.id)}
+          onPress={this.navigateToScreen(nav_screen, item.id, item)}
         >
           <Icon name="soccer-ball-o" size={20} color="white" style={{ marginLeft: 10 }} />
           <Text style={styles.navItemStyle}>{item.caption}</Text>

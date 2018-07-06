@@ -17,8 +17,6 @@ export default createMaterialTopTabNavigator(
             screen: Team
         }
     },{
-        tabBarPosition: 'top',
-        initialRouteName: 'Match',
         tabBarOptions:{
             style: {
                 backgroundColor: "#334562"
@@ -26,7 +24,8 @@ export default createMaterialTopTabNavigator(
             indicatorStyle:{
                 height: 1,
                 backgroundColor: "#dbd9d9"
-            }
-        }
+            },
+        },
+        lazyLoad: false
     }
 );

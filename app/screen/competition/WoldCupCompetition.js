@@ -15,14 +15,23 @@ const constants = require("../../constants");
 export default class WorldCupCompetition extends Component {
   constructor(props) {
     super(props);
+   
     this.state = {
       result: null,
-      id: this.props.navigation.getParam("id", 0)
+      id: this.props.navigation.getParam("id", 0),
+      competition: null
     };
+    console.log('state: ', this.state.competition)
   }
 
-  componentDidMount() {
-    console.log("componentDidMount");
+   componentDidMount () {
+    // console.log("WorldCupCompetition -> " + this.props.navigation.getParam("competition", null))
+    // console.log(this.props.navigation.getParam("competition", null))
+      this.setState({
+        competition: this.props.navigation.getParam("competition", null)
+    })
+    console.log('cdm: ', this.state.competition)
+
     const url = constants.API_URL + constants.COMPETITION + "/" + this.props.navigation.getParam("id", 0);
     console.log(url)
     return footballApi
@@ -30,20 +39,18 @@ export default class WorldCupCompetition extends Component {
       constants.COMPETITION + "/" + this.props.navigation.getParam("id", 0)
     )
     .then(data => {
-      console.log(data);
     }).catch(error => {
         throw error
     });
   }
 
   componentDidUpdate() {
-    console.log("componentDidUpdate");
     footballApi
       .callAPI(
         constants.COMPETITION + "/" + this.props.navigation.getParam("id", 0)
       )
       .then(data => {
-        console.log(data);
+
       });
   }
 
@@ -52,6 +59,7 @@ export default class WorldCupCompetition extends Component {
   };
 
   render() {
+      console.log(console.log('vc: ', this.state.competition))
     return (
       <View style={{flex: 1}} >
         <Header {...this.props} title="WorldCup 2018"/>

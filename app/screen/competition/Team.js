@@ -6,7 +6,6 @@ export default class Team extends React.Component {
     render() {
       return (
         <View>
-        {/* <Header {...this.props} title="WorldCup 2018" /> */}
         <View
           style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
