@@ -23,7 +23,8 @@ export default createStackNavigator(
         },
         headerTintColor: "white"
       })
-    }
+    },
+    
   },
   {
     initialRouteName: "Competition",
