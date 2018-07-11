@@ -53,7 +53,7 @@ export default class Competition extends Component {
   render() {
     return (
       <View>
-        <Header {...this.props} />
+        {/* <Header {...this.props} /> */}
         <Text onPress={this.on_press("sfasfd")}>Competition Screen</Text>
         <Text>{this.props.navigation.getParam("id", 0)}</Text>
       </View>

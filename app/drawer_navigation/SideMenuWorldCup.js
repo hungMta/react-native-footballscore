@@ -41,7 +41,6 @@ export default class SideMenuWC extends Component {
     return footballApi
       .callAPI(url)
       .then(response => {
-        //   console.log(response.competitions)
         const temp = [
           {
             id: 0,
@@ -81,7 +80,6 @@ export default class SideMenuWC extends Component {
           }
         ];
         // temp.push(...response.competitions);
-        console.log(temp)
         this.setState({
           data: temp,
           isLoading: false

@@ -16,7 +16,7 @@ export default createMaterialTopTabNavigator(
         Team: {
             screen: Team
         }
-    },{
+    },{ 
         tabBarOptions:{
             style: {
                 backgroundColor: "#334562"
