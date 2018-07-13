@@ -16,11 +16,11 @@ import {
   ActivityIndicator, Alert
 } from "react-native";
 import { createStackNavigator, NavigationAction } from "react-navigation";
-import Header from "../../drawer_navigation/header";
-import styles from "../../style/styles";
-import NewsScreen from "./NewsDetailScreen";
+// import Header from "../../drawer_navigation/header";
+import styles from "../../../style/styles";
+// import NewsScreen from "./NewsDetailScreen";
 import Swiper from "react-native-swiper";
-const NewsApi = require("../../api/NewsApi");
+const NewsApi = require("../../../api/NewsApi");
 const Dimensions = require("Dimensions");
 const deviceWidth = Dimensions.get("window").width;
 

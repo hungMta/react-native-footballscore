@@ -8,8 +8,8 @@ import React, { Component } from "react";
 import { Text, View, TouchableOpacity } from "react-native";
 import { DrawerActions } from "react-navigation";
 import Header from "../../drawer_navigation/header";
-const footballApi = require("../../api/API");
-const constants = require("../../constants");
+const footballApi = require("../../../api/API");
+const constants = require("../../../constants");
 
 export default class Competition extends Component {
   constructor(props) {

@@ -15,10 +15,8 @@ import {
   TouchableOpacity,
   Image
 } from "react-native";
-import { DrawerActions } from "react-navigation";
 import LinearGradient from "react-native-linear-gradient";
 import Icon from "react-native-vector-icons/Feather";
-import styles from "../style/header.styles";
 
 export default class Header extends Component {
   render() {

@@ -28,26 +28,26 @@ export default createStackNavigator(
   },
   {
     initialRouteName: "Competition",
-    initialRouteParams: {
-      id: 2000,
-      competition: {
-        id: 2000,
-        area: {
-          id: 2267,
-          name: "World"
-        },
-        name: "FIFA World Cup",
-        code: null,
-        plan: "TIER_ONE",
-        currentSeason: {
-          id: 1,
-          startDate: "2018-06-14",
-          endDate: "2018-07-15",
-          currentMatchday: 3
-        },
-        numberOfAvailableSeasons: 1,
-        lastUpdated: "2018-06-04T00:02:58Z"
-      }
-    }
+    // initialRouteParams: {
+    //   id: 2000,
+    //   competition: {
+    //     id: 2000,
+    //     area: {
+    //       id: 2267,
+    //       name: "World"
+    //     },
+    //     name: "FIFA World Cup",
+    //     code: null,
+    //     plan: "TIER_ONE",
+    //     currentSeason: {
+    //       id: 1,
+    //       startDate: "2018-06-14",
+    //       endDate: "2018-07-15",
+    //       currentMatchday: 3
+    //     },
+    //     numberOfAvailableSeasons: 1,
+    //     lastUpdated: "2018-06-04T00:02:58Z"
+    //   }
+    // }
   }
 );

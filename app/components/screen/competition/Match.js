@@ -7,21 +7,22 @@ import {
   ActivityIndicator,
   Image
 } from "react-native";
-import Header from "../../drawer_navigation/header";
-import constants from "../../constants";
-import styles from "../../style/styles";
-const footballApi = require("../../api/API");
-const constant = require("../../constants");
+import styles from "../../../style/styles";
+import {connect} from "react-redux"
 
-export default class Match extends React.Component {
+const footballApi = require("../../../api/API");
+const constant = require("../../../constants");
+
+class Match extends React.Component {
   constructor(props) {
     super(props);
     this.viewStatus = this.viewStatus.bind(this);
     this.viewScore = this.viewScore.bind(this);
+    console.log("Match => ", this.props.competition);
     this.state = {
       matches: [],
       isLoading: true,
-      currentMatch: this.props.screenProps.competition.currentSeason
+      currentMatch: this.props.competition.currentSeason
         .currentMatchday,
       isRefreshing: false
     };
@@ -33,7 +34,7 @@ export default class Match extends React.Component {
 
   makeRemoteRefresh = () => {
     console.log("currentMatch: ", this.state.currentMatch);
-    const competition = this.props.screenProps.competition;
+    const competition = this.props.competition;
     const currentMatch = this.state.currentMatch;
     const params =
       constant.COMPETITION +
@@ -49,7 +50,7 @@ export default class Match extends React.Component {
         this.setState({
           matches:
             currentMatch ===
-            this.props.screenProps.competition.currentSeason.currentMatchday
+            this.props.competition.currentSeason.currentMatchday
               ? response.matches
               : [...this.state.matches, ...response.matches.reverse()],
           isLoading: false,
@@ -211,11 +212,11 @@ export default class Match extends React.Component {
   handleRefresh = () => {
     console.log("handleRefresh");
     console.log(
-      this.props.screenProps.competition.currentSeason.currentMatchday
+      this.props.competition.currentSeason.currentMatchday
     );
     this.setState(
       {
-        currentMatch: this.props.screenProps.competition.currentSeason
+        currentMatch: this.props.competition.currentSeason
           .currentMatchday,
         isRefreshing: true
       },
@@ -276,3 +277,12 @@ export default class Match extends React.Component {
     );
   }
 }
+
+function mapStateToProps(state){
+  console.log('state/mapstate : ', state);
+  return {
+    competition: state.wcResult
+  }
+}
+
+export default connect(mapStateToProps)(Match)

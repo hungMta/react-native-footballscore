@@ -6,44 +6,56 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, StatusBar} from 'react-native';
-import {AppRegistry} from 'react-native';
-import DrawerNavigator from './drawer_navigation/routes'
+import React, { Component } from "react";
+import { Platform, StyleSheet, Text, View, StatusBar } from "react-native";
+import { AppRegistry } from "react-native";
+import DrawerNavigator from "./components/drawer_navigation/routes";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
-const MyStatusBar = ({backgroundColor, ...props}) => (
+const MyStatusBar = ({ backgroundColor, ...props }) => (
   <View style={[styles.statusBar, { backgroundColor }]}>
     <StatusBar translucent backgroundColor={backgroundColor} {...props} />
   </View>
 );
 
-export default class App extends Component {
+class Main extends Component {
   render() {
     return (
-      <View style={{flex: 1}}>
-            <MyStatusBar backgroundColor="#334562" barStyle="light-content" />
-            <DrawerNavigator />
+      <View style={{ flex: 1 }}>
+        <MyStatusBar backgroundColor="#334562" barStyle="light-content" />
+        <DrawerNavigator />
       </View>
-  )
+    );
   }
 }
 
-const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBar.currentHeight;
-const APPBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 56;
+export default class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <Main />
+      </Provider>
+    );
+  }
+}
+
+const STATUSBAR_HEIGHT = Platform.OS === "ios" ? 20 : StatusBar.currentHeight;
+const APPBAR_HEIGHT = Platform.OS === "ios" ? 44 : 56;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   },
   statusBar: {
-    height: STATUSBAR_HEIGHT,
+    height: STATUSBAR_HEIGHT
   },
   appBar: {
-    backgroundColor:'#79B45D',
-    height: APPBAR_HEIGHT,
+    backgroundColor: "#79B45D",
+    height: APPBAR_HEIGHT
   },
   content: {
     flex: 1,
-    backgroundColor: '#33373B',
-  },
+    backgroundColor: "#33373B"
+  }
 });

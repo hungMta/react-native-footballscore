@@ -9,8 +9,8 @@ import { Text, View, TouchableOpacity } from "react-native";
 import { DrawerActions } from "react-navigation";
 import Header from "../../drawer_navigation/header";
 import MyTabNaivgator from "../myTabNavigator/MyTabNavigator";
-const footballApi = require("../../api/API");
-const constants = require("../../constants");
+const footballApi = require("../../../api/API");
+const constants = require("../../../constants");
 
 export default class WorldCupCompetition extends Component {
   constructor(props) {

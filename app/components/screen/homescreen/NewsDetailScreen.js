@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import Icon from "react-native-vector-icons/Entypo";
-import styles from "../../style/styles"
+import styles from "../../../style/styles"
 
 export default class NewsDetailScreen extends Component {
   constructor(props) {
