@@ -8,8 +8,9 @@ import TeamDetail from "./Team/index";
 import PlayerDetail from "./Player/index";
 import constants from "../../../constants/variable";
 import IOSIcon from "react-native-vector-icons/Ionicons";
+import { connect } from "react-redux";
 
-export default createStackNavigator(
+const stack = createStackNavigator(
   {
     AllCompetition: {
       screen: AllCompetition,
@@ -78,3 +79,11 @@ export default createStackNavigator(
     headerMode: "screen"
   }
 );
+
+// function mapStateToProps(state) {
+//   return {
+//     competition: state.competition
+//   };
+// }
+
+export default stack;

@@ -13,6 +13,7 @@ function* getApiData(action) {
   }
 }
 
+
 export default function* mySaga(){
     yield takeLatest|(REQUEST_API_DATA, getApiData);
 }

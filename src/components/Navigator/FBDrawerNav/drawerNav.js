@@ -9,24 +9,13 @@ import NewsStack from "../../../container/News/Stack/index";
 import constants from "../../../constants/variable";
 import IOSIcon from "react-native-vector-icons/Ionicons";
 
-export default createDrawerNavigator(
+const drawer = createDrawerNavigator(
   {
     News: NewsStack,
     AllCompetition: {
       screen: CompetitionStack,
       navigationOptions: ({ navigation }) => ({
         title: "About"
-        //   headerStyle: {
-        //     backgroundColor: constants.primaryDarkColor
-        //   },
-        //   headerTitleStyle: {
-        //     color: "white"
-        //   },
-        //   headerLeft: (
-        //       <TouchableOpacity onPress={() => navigation.openDrawer()}>
-        //         <IOSIcon name="ios-menu" size={30} color="white" style={{margin: 5}} />
-        //       </TouchableOpacity>
-        //     ),
       })
     },
     About: AboutStack
@@ -36,3 +25,11 @@ export default createDrawerNavigator(
     initialRouteName: "News"
   }
 );
+
+function mapStateToProps(state) {
+  return {
+    competition: state.competition
+  }
+}
+
+export default connect(mapStateToProps)(drawer)

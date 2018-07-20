@@ -45,7 +45,6 @@ class SideBar extends Component {
   }
 
   sideBarItem = (item, index) => {
-    console.log(item.route);
     return (
       <View key={index}>
         <TouchableOpacity
