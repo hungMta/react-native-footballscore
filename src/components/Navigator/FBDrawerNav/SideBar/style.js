@@ -11,7 +11,8 @@ export default {
   avatar: {
     height: 100,
     width: 100,
-    backgroundColor: "white"
+    marginTop: 20,
+    marginBottom: 20
   },
   listItemContainer: {
     marginTop: 20,
@@ -20,15 +21,20 @@ export default {
   },
   itemContanier: {
     height: 45,
-    alignItems: 'center',
+    alignItems: "center",
     paddingLeft: 10,
     backgroundColor: constants.primaryColor,
-    flexDirection: 'row',
+    flexDirection: "row"
   },
-  primaryColor:{
+  primaryColor: {
     backgroundColor: constants.primaryColor
   },
-  flex_1:{
-    flex: 1,
+  flex_1: {
+    flex: 1
+  },
+  drawerImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
   }
 };

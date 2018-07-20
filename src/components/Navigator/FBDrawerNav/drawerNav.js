@@ -1,22 +1,35 @@
 import React, { Component } from "react";
 import { View } from "react-native";
 import { createDrawerNavigator } from "react-navigation";
-// import TabNavIndex from "../FBTab/index";
-// import StackNav from "../FBStackNav/index";
 import { connect } from "react-redux";
 import SideBar from "./SideBar/sideBar";
-import About from "../../../container/About/StackNavigator/index";
-import Competition from "../../../container/Competition/nav/index";
-import News from "../../../container/News/Nav/NewsNavigation/index";
-import MainContainer from "../../../container/StackNavigator/index";
+import AboutStack from "../../../container/About/StackNavigator/index";
+import CompetitionStack from "../../../container/Competition/Stack/index";
+import NewsStack from "../../../container/News/Stack/index";
+import constants from "../../../constants/variable";
+import IOSIcon from "react-native-vector-icons/Ionicons";
 
 export default createDrawerNavigator(
   {
-    News: News,
+    News: NewsStack,
     AllCompetition: {
-      screen: Competition,
+      screen: CompetitionStack,
+      navigationOptions: ({ navigation }) => ({
+        title: "About"
+        //   headerStyle: {
+        //     backgroundColor: constants.primaryDarkColor
+        //   },
+        //   headerTitleStyle: {
+        //     color: "white"
+        //   },
+        //   headerLeft: (
+        //       <TouchableOpacity onPress={() => navigation.openDrawer()}>
+        //         <IOSIcon name="ios-menu" size={30} color="white" style={{margin: 5}} />
+        //       </TouchableOpacity>
+        //     ),
+      })
     },
-    About: About
+    About: AboutStack
   },
   {
     contentComponent: SideBar,
