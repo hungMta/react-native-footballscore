@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { View, Text, TouchableOpacity, ActivityIndicator, Alert } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  ActivityIndicator,
+  Alert,
+  FlatList
+} from "react-native";
 import { NavigationActions, StackActions } from "react-navigation";
 import { connect } from "react-redux";
 import {
@@ -7,10 +14,17 @@ import {
   getCompetition,
   resetCompetitionState
 } from "../../../../store/action/competition";
+import { SCREEN_COMPETITION_TAB } from "../index";
+import styles from "./style";
+import { cloneableGenerator } from "redux-saga/utils";
 
 class AllCompetition extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      page: 1,
+      data: []
+    };
   }
 
   componentDidMount() {
@@ -21,49 +35,106 @@ class AllCompetition extends Component {
     this.props.resetCompetitionState();
   }
 
-  navigateToScreen(route) {
+  componentWillReceiveProps(nextProps) {
+    // console.log(
+    //   "componentWillReceiveProps ",
+    //   nextProps.competition.data.competitions.slice(0, 20)
+    // );
+    // this.setState({
+    //   data: nextProps.competition.data.competitions.slice(0, 20)
+    // });
+  }
+
+  navigateToScreen(route, item) {
     const stackActions = StackActions.push({
       routeName: route,
       params: {
-        title: "Com1"
+        competition: item
       }
     });
     this.props.navigation.dispatch(stackActions);
   }
 
+  flatItem = ({ item }) => {
+    return (
+      <TouchableOpacity
+        style={styles.flatItem}
+        onPress={() => this.navigateToScreen(SCREEN_COMPETITION_TAB, item)}
+      >
+        <Text
+          style={{
+            color: "white",
+            paddingRight: 10,
+            paddingLeft: 10,
+            textAlign: "center"
+          }}
+        >
+          {item.caption}
+        </Text>
+      </TouchableOpacity>
+    );
+  };
+
+  flatKeyExtractor(item, index) {
+    return item.id.toString();
+  }
+
+  flexLoadmore() {
+    console.log("flexLoadmore ######");
+    console.log(this.state.page);
+    this.setState(
+      {
+        page: this.state.page + 1
+        // data: this.state.data.concat(
+        //   this.props.competition.data.competitions.slice(
+        //     this.state.data.length,
+        //     this.state.page * 20
+        //   )
+        // )
+      },
+      () => this.makeRemoteRequest()
+    );
+  }
+
+  makeRemoteRequest() {
+    console.log("makeRemoteRequest ########");
+    this.setState({
+      data: [
+        ...this.state.data,
+        ...this.props.competition.data.competitions.slice(
+          this.state.data.length,
+          this.state.page * 20
+        )
+      ]
+    });
+  }
+
   render() {
     if (this.props.competition.allLoading) {
-      if(this.props.competition.error !== ""){
-        console.log(this.props.competition.error)
-        Alert.alert(
-          'Alert Title',
-          this.props.competition.error,
-          // [
-          //   {text: 'Ask me later', onPress: () => console.log('Ask me later pressed')},
-          //   {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
-          //   {text: 'OK', onPress: () => console.log('OK Pressed')},
-          // ],
-          { cancelable: false }
-        )
-        return <View/>
+      console.log("this.props.competition : ", this.props.competition);
+      if (this.props.competition.errMsg !== null) {
+        console.log(this.props.competition.errMsg);
+        Alert.alert("Error", this.props.competition.errMsg, {
+          cancelable: false
+        });
+        return <View />;
       }
       return (
-        <View
-          style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-        >
-          <ActivityIndicator />
+        <View style={styles.container}>
+          <View style={{ alignItems: "center", justifyContent: "center" }}>
+            <ActivityIndicator />
+          </View>
         </View>
       );
     }
     return (
-      <View style={{ justifyContent: "center" }}>
-      {console.log("data ",this.props.competition.data)}
-        <Text>AllCompetition</Text>
-        <TouchableOpacity
-          onPress={() => this.navigateToScreen("ComeptitionTab")}
-        >
-          <Text>Com1</Text>
-        </TouchableOpacity>
+      <View style={styles.container}>
+        <FlatList
+          data={this.props.competition.data}
+          numColumns={2}
+          keyExtractor={this.flatKeyExtractor}
+          renderItem={this.flatItem}
+        />
       </View>
     );
   }
@@ -83,5 +154,5 @@ function mapPropsToDispatch() {
 
 export default connect(
   mapStateToProps,
-  {getAllCompetition, resetCompetitionState}
+  { getAllCompetition, resetCompetitionState }
 )(AllCompetition);

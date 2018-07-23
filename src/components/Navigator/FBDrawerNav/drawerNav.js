@@ -15,7 +15,8 @@ const drawer = createDrawerNavigator(
     AllCompetition: {
       screen: CompetitionStack,
       navigationOptions: ({ navigation }) => ({
-        title: "About"
+        title: "About",
+        headerBackTitle: null
       })
     },
     About: AboutStack

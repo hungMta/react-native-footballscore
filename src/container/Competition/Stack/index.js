@@ -10,12 +10,19 @@ import constants from "../../../constants/variable";
 import IOSIcon from "react-native-vector-icons/Ionicons";
 import { connect } from "react-redux";
 
+export const SCREEN_ALL_COMPETION = "AllCompetition";
+export const SCREEN_COMPETITION_TAB = "ComeptitionTab";
+export const SCREEN_FIXTURE_DETAIL = "FixtureDetail";
+export const SCREEN_TEAM_DETAIL = "TeamDetail";
+export const SCREEN_PLAYER_DETAIL = "PlayerDetail";
+
 const stack = createStackNavigator(
   {
     AllCompetition: {
       screen: AllCompetition,
       navigationOptions: ({ navigation }) => ({
         title: "Competitions",
+        headerBackTitle: null,
         headerStyle: {
           backgroundColor: constants.primaryDarkColor
         },
@@ -37,11 +44,12 @@ const stack = createStackNavigator(
     ComeptitionTab: {
       screen: CompetitionTab,
       navigationOptions: ({ navigation }) => ({
-        title: navigation.getParam("title", "null"),
+        title: navigation.getParam("competition", null).caption,
         headerStyle: {
           backgroundColor: constants.primaryDarkColor
         },
-        headerTintColor: "white"
+        headerTintColor: "white",
+        headerBackTitle: null
       })
     },
     FixtureDetail: {
@@ -76,7 +84,8 @@ const stack = createStackNavigator(
     }
   },
   {
-    headerMode: "screen"
+    // headerMode: "screen",
+    headerBackTitleVisible: false
   }
 );
 

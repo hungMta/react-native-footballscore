@@ -15,19 +15,22 @@ export default createBottomTabNavigator(
       navigationOptions: ({ navigation }) => ({
         tabBarIcon: ({ tintColor }) => (
           <EntypoIcon name="game-controller" color={tintColor} size={24} />
-        )
-      })
+        ),
+        headerBackTitle: null
+      }),
     },
     LeagueTable: {
       screen: LeagueTable,
       navigationOptions: ({ navigation }) => ({
         tabBarIcon: ({ tintColor }) => (
           <FontAwesome name="table" color={tintColor} size={24} />
-        )
-      })
+        ),
+        headerBackTitle: null
+      }),
     }
   },
   {
+    headerBackTitleVisible: false,
     tabBarOptions: {
       activeTintColor: "tomato",
       inactiveTintColor: "gray",
@@ -37,9 +40,6 @@ export default createBottomTabNavigator(
       style: {
         backgroundColor: constants.primaryDarkColor
       }
-      // tabBarIcon: ({focused, tintColor}) => ({
-
-      // })
     }
   }
 );

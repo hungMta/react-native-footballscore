@@ -23,10 +23,13 @@ function* fetchDataAllCompetition() {
   try {
     const data = yield call(fetchData, "competitions");
     yield put({ type: COMPETITION_GET_ALL_SUCCESS, data });
-  } catch (e) {
-      console.log("saga")
-      console.log(e)
-    yield put({ type: COMPETITION_GET_ALL_FAIL, e });
+  } catch (error) {
+    console.log("saga");
+    console.log(error);
+    yield put({
+      type: COMPETITION_GET_ALL_FAIL,
+      errMsg: "Something went wrong!"
+    });
   }
 }
 
@@ -39,7 +42,6 @@ function* getAllCompetition() {
       yield cancel(task);
     }
   } catch (error) {
-    // console.log(error);
     yield put({ type: COMPETITION_GET_ALL_FAIL, error });
   }
 }

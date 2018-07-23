@@ -225,7 +225,7 @@ class Match extends React.Component {
   };
 
   handleLoadMore = () => {
-    console.log("handleLoadMore");
+    console.log("handleLoadMore #######");
     if (this.state.currentMatch > 1) {
       this.setState(
         {

@@ -25,6 +25,9 @@ export const FIXTURE_GET_FIXTURE_DETAIL = "fixture/detail";
 export const FIXTURE_GET_FIXTURE_DETAIL_SUCCESS = "fixture/detail/success";
 export const FIXTURE_GET_FIXTURE_DETAIL_FAIL = "fixture/detail/fail";
 
+export const FIXTURE_ALL_FIXTURE_RESET = "fixture/all/reset";
+export const FIXTURE_FIXTURE_DETAIL_RESET = "fixture/detail/reset";
+
 /**
  * TEAM
  */

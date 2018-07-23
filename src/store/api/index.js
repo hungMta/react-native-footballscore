@@ -13,16 +13,16 @@ export default async function fetchData(path) {
     console.log("response ", response);
     const json = await response.json();
     if (response.status === 200) {
-      console.log("success ", json);
+      // console.log("success ", json);
       return json;
     }
     if(response.status === 404) {
-        console.log(json.error)
-        return Promise.reject(json.error);    
+        // console.log(json)
+        return Promise.reject(json);    
     }
-    console.log("done")
+    // console.log("done")
   } catch (e) {
-    console.log("error");
+    // console.log("error");
     return Promise.reject(e);
   }
 }
