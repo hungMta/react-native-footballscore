@@ -35,6 +35,32 @@ export default {
   drawerImage: {
     width: 100,
     height: 100,
-    borderRadius: 50,
+    borderRadius: 50
+  },
+  backgroundPickerDialog: {
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: "black",
+    opacity: 0.3,
+    position: "absolute"
+  },
+  pickerDialogContainer: {
+    bottom: 0,
+    left: 0,
+    right: 0,
+    position: "absolute"
+  },
+  pickerButton: {
+    height: 50,
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  pickerButtonMargin: {
+    marginRight: 10,
+    marginLeft: 10,
+    marginBottom: 1
   }
 };
