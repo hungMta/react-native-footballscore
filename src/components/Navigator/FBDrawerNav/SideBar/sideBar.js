@@ -10,18 +10,91 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import styles from "./style";
 import option from "./option";
 import images from "../../../../../assets/images/index"
+const ImagePicker = require('react-native-image-picker')
+console.log(ImagePicker)
+var options = {
+  title: 'Select Avatar',
+  customButtons: [
+    {name: 'fb', title: 'Choose Photo from Facebook'},
+  ],
+  storageOptions: {
+    skipBackup: true,
+    path: 'images'
+  }
+};
 
 class Header extends Component {
+
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+      avatarSource: images.avatar
+    };
+  };
+  
+
+  chooseImage = () => {
+    console.log(ImagePicker)
+    // ImagePicker.showImagePicker(null, (response) => {
+    //   console.log('Response = ', response);
+    
+    //   if (response.didCancel) {
+    //     console.log('User cancelled image picker');
+    //   }
+    //   else if (response.error) {
+    //     console.log('ImagePicker Error: ', response.error);
+    //   }
+    //   else if (response.customButton) {
+    //     console.log('User tapped custom button: ', response.customButton);
+    //   }
+    //   else {
+    //     let source = { uri: response.uri };
+    
+    //     // You can also display the image using data:
+    //     // let source = { uri: 'data:image/jpeg;base64,' + response.data };
+    
+    //     this.setState({
+    //       avatarSource: source
+    //     });
+    //   }
+    // });
+
+   ImagePicker.showImagePicker(null, (response) => {
+      console.log('Response = ', response);
+    
+      if (response.didCancel) {
+        console.log('User cancelled image picker');
+      }
+      else if (response.error) {
+        console.log('ImagePicker Error: ', response.error);
+      }
+      else if (response.customButton) {
+        console.log('User tapped custom button: ', response.customButton);
+      }
+      else {
+        let source = { uri: response.uri };
+    
+        // You can also display the image using data:
+        // let source = { uri: 'data:image/jpeg;base64,' + response.data };
+    
+        this.setState({
+          avatarSource: source
+        });
+      }
+    });
+  }
+
   render() {
     return (
       <View style={styles.header}>
         <View />
-        <View style={styles.avatar}>
+        <TouchableOpacity style={styles.avatar} onPress={() => this.chooseImage()}>
           <Image
-            source={images.avatar}
+            source={this.state.avatarSource}
             style={styles.drawerImage}
           />
-        </View>
+        </TouchableOpacity>
         <View style={{ alignItems: "center"}}>
           <Text style={{ color: "white" }}>Eddy</Text>
           <Text style={{ color: "white" }}>Eddy@email.com</Text>
