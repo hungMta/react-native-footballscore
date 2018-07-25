@@ -1,13 +1,38 @@
 import React, { Component } from "react";
-import { View, Text } from "react-native";
-import { connect } from "react-redux";
+import { View, Text, WebView, ActivityIndicator } from "react-native";
 
 class NewsDetail extends Component {
-  render() {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loading: true
+    };
+  }
+
+  hideSpinner = () => {
+    console.log("load success");
+    this.setState({ loading: false });
+  };
+
+  displaySpinner = () => {
     return (
-      <View style={{ justifyContent: "center" }}>
-        <Text>NewsDetail</Text>
+      <View marginTop={20}>
+        <ActivityIndicator />
       </View>
+    );
+  };
+
+  render() {
+    console.log(this.props.navigation.getParam("url", ""));
+    return (
+      <WebView
+        source={{ uri: this.props.navigation.getParam("url", "") }}
+        startInLoadingState={true}
+        renderLoading={() => {
+          return this.displaySpinner();
+        }}
+      />
     );
   }
 }

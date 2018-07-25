@@ -23,8 +23,8 @@ class Header extends Component {
           />
         </View>
         <View style={{ alignItems: "center"}}>
-          <Text style={{ color: "white" }}>Clay</Text>
-          <Text style={{ color: "white" }}>ClayJensen@email.com</Text>
+          <Text style={{ color: "white" }}>Eddy</Text>
+          <Text style={{ color: "white" }}>Eddy@email.com</Text>
         </View>
       </View>
     );

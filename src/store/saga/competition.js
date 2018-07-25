@@ -10,31 +10,25 @@ import {
 import fetchData from "../api/index";
 import {
   COMPETITION_GET_ALL_COMPETITON,
-  COMPETITION_GET_COMPETITION_DETAIL,
-  COMPETITION_GET_ALL_SUCCESS,
-  COMPETITION_GET_ALL_FAIL,
-  COMPETITION_GET_COMPETITION_DETAIL_FAIL,
-  COMPETITION_GET_COMPETITION_DETAIL_SUCCESS,
   COMPETITION_GET_ALL_RESET_SATE,
-  COMPETITION_GET_COMPETITION_DETAIL_RESET_SATE
 } from "../../constants/types";
+
+import {
+  getAllCompetitionSuccess,
+  getAllCompetitionFail,
+  resetCompetitionState
+} from "../action/competition";
 
 function* fetchDataAllCompetition() {
   try {
     const data = yield call(fetchData, "competitions");
-    yield put({ type: COMPETITION_GET_ALL_SUCCESS, data });
+    yield put(getAllCompetitionSuccess(data));
   } catch (error) {
-    console.log("saga");
-    console.log(error);
-    yield put({
-      type: COMPETITION_GET_ALL_FAIL,
-      errMsg: "Something went wrong!"
-    });
+    yield put(getAllCompetitionFail(error));
   }
 }
 
 function* getAllCompetition() {
-  console.log("getAllCompetition");
   try {
     const task = yield fork(fetchDataAllCompetition);
     const action = yield take([COMPETITION_GET_ALL_RESET_SATE]);
@@ -42,7 +36,7 @@ function* getAllCompetition() {
       yield cancel(task);
     }
   } catch (error) {
-    yield put({ type: COMPETITION_GET_ALL_FAIL, error });
+    yield put(getAllCompetitionFail(error));
   }
 }
 
@@ -52,12 +46,12 @@ export function* watchGetAllCompetititon() {
 
 function* getCompetitionDetail() {}
 
-function* resetCompetitionState() {
-  yield put({ type: COMPETITION_GET_ALL_RESET_SATE });
+function* resetCompetition() {
+  yield put(resetCompetitionState());
 }
 
-export function* watchResetCompetitionState() {
-  yield takeLatest(COMPETITION_GET_ALL_RESET_SATE, resetCompetitionState);
+export function* watchResetCompetition() {
+  yield takeLatest(COMPETITION_GET_ALL_RESET_SATE, resetCompetition);
 }
 
 export function* watchGetCompetitionDetail() {}

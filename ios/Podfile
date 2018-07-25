@@ -16,6 +16,8 @@ pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
     # Pods for testing
     pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+    pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
+
   end
 
   target 'FootballScoreTests' do

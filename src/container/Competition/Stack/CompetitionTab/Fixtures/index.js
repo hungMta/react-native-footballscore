@@ -9,7 +9,10 @@ import {
 } from "react-native";
 import { NavigationActions } from "react-navigation";
 import { connect } from "react-redux";
-import { getAllFixtures } from "../../../../../store/action/fixture";
+import {
+  getAllFixtures,
+  resetFixturesState
+} from "../../../../../store/action/fixture";
 import styles from "./style";
 import { FIXTURE_ALL_FIXTURE_RESET } from "../../../../../constants/types";
 import { delay } from "redux-saga";
@@ -26,11 +29,16 @@ class Fixtures extends Component {
       page: 1,
       isRefreshing: false
     };
-    this.props.getAllFixtures(competition.id);
   }
 
-  componentWillMount() {
-    console.log("componentWillMount");
+  componentDidMount() {
+    this.props.getAllFixtures(
+      this.props.navigation.getParam("competition", null).id
+    );
+  }
+
+  componentWillUnmount() {
+    this.props.resetFixturesState();
   }
 
   navigateToScreen(route) {
@@ -128,7 +136,7 @@ class Fixtures extends Component {
       item.result.goalsHomeTeam > item.result.goalsAwayTeam ? true : false;
 
     return (
-      <View style={styles.itemWrapper}>
+      <TouchableOpacity style={styles.itemWrapper}>
         <View style={styles.matchItem}>
           <View style={styles.centerChildColumn}>
             <View style={[styles.flex_1, styles.centerHorizontal]}>
@@ -178,7 +186,7 @@ class Fixtures extends Component {
             </View>
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   };
 
@@ -228,7 +236,7 @@ class Fixtures extends Component {
     if (this.props.data.loading) {
       return (
         <View style={styles.container}>
-          <ActivityIndicator />
+          <ActivityIndicator marginTop={20} />
         </View>
       );
     }
@@ -255,7 +263,13 @@ function mapStateToProps(state) {
   };
 }
 
+function mapPropsToDispatch() {
+  return {
+    getAllFixtures: getAllFixtures
+  };
+}
+
 export default connect(
   mapStateToProps,
-  { getAllFixtures }
+  { getAllFixtures, resetFixturesState }
 )(Fixtures);

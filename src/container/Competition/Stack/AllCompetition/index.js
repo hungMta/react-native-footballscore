@@ -35,16 +35,6 @@ class AllCompetition extends Component {
     this.props.resetCompetitionState();
   }
 
-  componentWillReceiveProps(nextProps) {
-    // console.log(
-    //   "componentWillReceiveProps ",
-    //   nextProps.competition.data.competitions.slice(0, 20)
-    // );
-    // this.setState({
-    //   data: nextProps.competition.data.competitions.slice(0, 20)
-    // });
-  }
-
   navigateToScreen(route, item) {
     const stackActions = StackActions.push({
       routeName: route,
@@ -61,16 +51,7 @@ class AllCompetition extends Component {
         style={styles.flatItem}
         onPress={() => this.navigateToScreen(SCREEN_COMPETITION_TAB, item)}
       >
-        <Text
-          style={{
-            color: "white",
-            paddingRight: 10,
-            paddingLeft: 10,
-            textAlign: "center"
-          }}
-        >
-          {item.caption}
-        </Text>
+        <Text style={styles.caption}>{item.caption}</Text>
       </TouchableOpacity>
     );
   };
@@ -80,24 +61,16 @@ class AllCompetition extends Component {
   }
 
   flexLoadmore() {
-    console.log("flexLoadmore ######");
     console.log(this.state.page);
     this.setState(
       {
         page: this.state.page + 1
-        // data: this.state.data.concat(
-        //   this.props.competition.data.competitions.slice(
-        //     this.state.data.length,
-        //     this.state.page * 20
-        //   )
-        // )
       },
       () => this.makeRemoteRequest()
     );
   }
 
   makeRemoteRequest() {
-    console.log("makeRemoteRequest ########");
     this.setState({
       data: [
         ...this.state.data,
@@ -111,7 +84,6 @@ class AllCompetition extends Component {
 
   render() {
     if (this.props.competition.allLoading) {
-      console.log("this.props.competition : ", this.props.competition);
       if (this.props.competition.errMsg !== null) {
         console.log(this.props.competition.errMsg);
         Alert.alert("Error", this.props.competition.errMsg, {
@@ -121,8 +93,8 @@ class AllCompetition extends Component {
       }
       return (
         <View style={styles.container}>
-          <View style={{ alignItems: "center", justifyContent: "center" }}>
-            <ActivityIndicator />
+          <View style={styles.centerChild}>
+            <ActivityIndicator marginTop={20} />
           </View>
         </View>
       );

@@ -18,7 +18,7 @@ export default createStackNavigator({
         color: "white"
       },
       headerLeft: (
-        <TouchableOpacity onPress={() => navigation.openDrawer()}>
+        <TouchableOpacity onPress={() => navigation.openDrawer()} style={{width: 60, justifyContent:"center", alignItems:"center"}}>
           <IOSIcon
             name="ios-menu"
             size={30}
@@ -26,19 +26,22 @@ export default createStackNavigator({
             style={{ margin: 5 }}
           />
         </TouchableOpacity>
-      )
+      ),
+      headerBackTitle: null,
+      headerTintColor: "white"
     })
   },
   NewsDetail: {
     screen: NewsDetail,
     navigationOptions: ({ navigation }) => ({
-      title: "NewsDetail",
+      title: "News",
       headerStyle: {
         backgroundColor: constants.primaryDarkColor
       },
       headerTitleStyle: {
         color: "white"
-      }
+      },
+      headerTintColor: "white"
     })
   }
 });

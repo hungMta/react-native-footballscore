@@ -10,38 +10,29 @@ import {
 import fetchData from "../api/index";
 import {
   FIXTURE_ALL_FIXTURE_RESET,
-  FIXTURE_FIXTURE_DETAIL_RESET,
   FIXTURE_GET_ALL_FIXTURE,
-  FIXTURE_GET_ALL_FIXTURE_FAIL,
-  FIXTURE_GET_ALL_FIXTURE_SUCCESS,
-  FIXTURE_GET_FIXTURE_DETAIL,
-  FIXTURE_GET_FIXTURE_DETAIL_FAIL,
-  FIXTURE_GET_FIXTURE_DETAIL_SUCCESS
 } from "../../constants/types";
+
+import {
+  getAllFixturesSuccess,
+  getAllFixturesFail,
+  resetFixturesState
+} from "../action/fixture";
 
 function* fetchDataAllFixtures(idCompetition) {
   try {
-    console.log("fetchDataAllFixtures");
     const data = yield call(
       fetchData,
       "competitions/" + idCompetition + "/fixtures"
     );
-    console.log("saga data: ", data);
-    yield put({ type: FIXTURE_GET_ALL_FIXTURE_SUCCESS, data });
+    yield put(getAllFixturesSuccess(data));
   } catch (error) {
-    console.log("saga");
-    console.log(error);
-    yield put({
-      type: FIXTURE_GET_ALL_FIXTURE_FAIL,
-      errMsg: "Something went wrong!"
-    });
+    yield put(getAllFixturesFail(error));
   }
 }
 
 function* getAllFixtures(action) {
   const idCompetition = action.idCompetition;
-  console.log("getAllFixtures");
-  console.log(idCompetition);
   try {
     const task = yield fork(fetchDataAllFixtures, idCompetition);
     const action = yield take([FIXTURE_ALL_FIXTURE_RESET]);
@@ -49,20 +40,18 @@ function* getAllFixtures(action) {
       yield cancel(task);
     }
   } catch (error) {
-    console.log("error = ", error);
-    yield put({ type: FIXTURE_GET_ALL_FIXTURE_FAIL, error });
+    yield put(getAllFixturesFail(error));
   }
 }
 
 export function* watchGetAllFixtures() {
-  console.log("watchGetAllFixtures");
   yield takeLatest(FIXTURE_GET_ALL_FIXTURE, getAllFixtures);
 }
 
 // function* getCompetitionDetail() {}
 
 function* resetFixturesSate() {
-  yield put({ type: FIXTURE_ALL_FIXTURE_RESET });
+  yield put(resetFixturesState());
 }
 
 export function* watchResetFixturesState() {

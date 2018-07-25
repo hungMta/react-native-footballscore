@@ -145,7 +145,7 @@ export default {
   },
   matchItem: {
     flex: 1,
-    backgroundColor: "#3b5072",
+    backgroundColor: "#717182",
     flexDirection: "row",
     borderRadius: 5,
     borderWidth: 1,
@@ -229,5 +229,5 @@ export default {
     marginTop: 10,
     alignItems: "center"
   },
-  statusStyle: { color: "white", fontSize: 10 }
+  statusStyle: { color: "white", fontSize: 10 },
 };

@@ -7,6 +7,9 @@ export default {
     padding: 5,
     flex: 1
   },
+  centerChild: {
+    alignItems: "center", justifyContent: "center" 
+  },
   header: {
     height: 200,
     backgroundColor: constants.primaryDarkColor,
@@ -45,9 +48,57 @@ export default {
   flatItem: {
     height: 100,
     flex: 0.5,
-    backgroundColor: "gray",
+    backgroundColor: "#717182",
     alignItems: "center",
     justifyContent: "center",
     margin: 5
+  },
+  itemStyle: {
+    backgroundColor: "#717182",
+    opacity: 0.5
+  },
+  hexagon: {
+    width: 100,
+    height: 55
+  },
+  hexagonInner: {
+    width: 100,
+    height: 55,
+    backgroundColor: "#717182"
+  },
+
+  hexagonAfter: {
+    position: "absolute",
+    bottom: -25,
+    left: 0,
+    width: 0,
+    height: 0,
+    borderStyle: "solid",
+    borderLeftWidth: 50,
+    borderLeftColor: "transparent",
+    borderRightWidth: 50,
+    borderRightColor: "transparent",
+    borderTopWidth: 25,
+    borderTopColor: "#717182"
+  },
+  hexagonBefore: {
+    position: "absolute",
+    top: -25,
+    left: 0,
+    width: 0,
+    height: 0,
+    borderStyle: "solid",
+    borderLeftWidth: 50,
+    borderLeftColor: "transparent",
+    borderRightWidth: 50,
+    borderRightColor: "transparent",
+    borderBottomWidth: 25,
+    borderBottomColor: "#717182"
+  },
+  caption: {
+    color: "white",
+    paddingRight: 10,
+    paddingLeft: 10,
+    textAlign: "center"
   }
 };

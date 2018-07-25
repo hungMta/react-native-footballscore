@@ -30,7 +30,7 @@ const stack = createStackNavigator(
           color: "white"
         },
         headerLeft: (
-          <TouchableOpacity onPress={() => navigation.openDrawer()}>
+          <TouchableOpacity onPress={() => navigation.openDrawer()} style={{width: 60, justifyContent:"center", alignItems:"center"}}>
             <IOSIcon
               name="ios-menu"
               size={30}

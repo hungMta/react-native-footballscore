@@ -48,3 +48,12 @@ export const PLAYER_GET_DETAIL_FAIL = "player/get/fail";
 export const LEAGUE_TABLE_GET = "leaguetable/get";
 export const LEAGUE_TABLE_GET_SUCCESS = "leaguetable/get/success";
 export const LEAGUE_TABLE_GET_FAIL = "leaguetable/get/fail";
+export const RESET_LEAGUE_TABLE_STATE = "leaguetable/reset";
+
+/**
+ * NEWS
+ */
+export const NEWS_GET = "news/get";
+export const NEWS_GET_SUCCESS = "news/get/success";
+export const NEWS_GET_FAIL = "news/get/fail";
+export const NEWS_RESET = "news/reset";
