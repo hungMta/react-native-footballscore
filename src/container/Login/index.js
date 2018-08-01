@@ -109,7 +109,7 @@ class Login extends Component {
           enabled
         >
           <TouchableOpacity
-            onPress={() => this.navigateToMain()}
+            onPress={() => {}}
             style={styles.btnLogin}
           >
             <Text style={{ color: "white" }}>Login</Text>
