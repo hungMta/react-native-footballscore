@@ -1,2 +1,3 @@
 # Building mobile app with React Native
- combine with redux, redux-saga, react-navigation
+ *Combine with redux, redux-saga, react-navigation
+ *This app uses http://www.football-data.org/docs/v1/ Api 
