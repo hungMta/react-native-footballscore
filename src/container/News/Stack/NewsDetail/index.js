@@ -11,7 +11,6 @@ class NewsDetail extends Component {
   }
 
   hideSpinner = () => {
-    console.log("load success");
     this.setState({ loading: false });
   };
 
@@ -24,7 +23,6 @@ class NewsDetail extends Component {
   };
 
   render() {
-    console.log(this.props.navigation.getParam("url", ""));
     return (
       <WebView
         source={{ uri: this.props.navigation.getParam("url", "") }}

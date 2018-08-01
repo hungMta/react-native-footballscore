@@ -5,10 +5,18 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import <UIKit/UIKit.h>
+#import <UIKit/UIKit.h> IQKeyboardManager.shared.enable = true
+#import <Firebase.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+
 @property (nonatomic, strong) UIWindow *window;
+
+//- (BOOL)application:(UIApplication *)application
+//didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//  [FIRApp configure];
+//  return YES;
+//}
 
 @end

@@ -5,7 +5,7 @@ import News from "./News/index";
 import NewsDetail from "./NewsDetail/index";
 import constants from "../../../constants/variable";
 import IOSIcon from "react-native-vector-icons/Ionicons";
-
+1234
 export default createStackNavigator({
   News: {
     screen: News,
@@ -44,4 +44,6 @@ export default createStackNavigator({
       headerTintColor: "white"
     })
   }
+}, {
+  initialRouteName:'News'
 });

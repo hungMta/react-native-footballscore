@@ -1,8 +1,30 @@
 PODS:
   - BVLinearGradient (2.4.0):
     - React
+  - Firebase/Core (4.13.0):
+    - FirebaseAnalytics (= 4.2.0)
+    - FirebaseCore (= 4.0.20)
+  - FirebaseAnalytics (4.2.0):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - nanopb (~> 0.3)
+  - FirebaseCore (4.0.20):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (2.0.10):
+    - FirebaseCore (~> 4.0)
+  - GoogleToolboxForMac/Defines (2.1.4)
+  - GoogleToolboxForMac/NSData+zlib (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
   - React (0.56.0):
     - React/Core (= 0.56.0)
+  - react-native-image-picker (0.14.3):
+    - React
   - React/Core (0.56.0):
     - yoga (= 0.56.0.React)
   - RNVectorIcons (4.6.0):
@@ -11,7 +33,9 @@ PODS:
 
 DEPENDENCIES:
   - BVLinearGradient (from `../node_modules/react-native-linear-gradient`)
+  - Firebase/Core
   - React (from `../node_modules/react-native`)
+  - react-native-image-picker (from `../node_modules/react-native-image-picker`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga/yoga.podspec`)
 
@@ -20,6 +44,8 @@ EXTERNAL SOURCES:
     :path: ../node_modules/react-native-linear-gradient
   React:
     :path: ../node_modules/react-native
+  react-native-image-picker:
+    :path: ../node_modules/react-native-image-picker
   RNVectorIcons:
     :path: ../node_modules/react-native-vector-icons
   yoga:
@@ -27,10 +53,17 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   BVLinearGradient: 8913bd8fdc47b85abc801ae8bae007bbfb6b4ce5
+  Firebase: 5ec5e863d269d82d66b4bf56856726f8fb8f0fb3
+  FirebaseAnalytics: 7ef69e76a5142f643aeb47c780e1cdce4e23632e
+  FirebaseCore: 90cb1c53d69b556f112a1bf72b5fcfaad7650790
+  FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
+  GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   React: bdb39c05e2eed10a43056cff89a68bc9ebe7f232
+  react-native-image-picker: 3693786b3d5958c8f71deed66ec068b323565e0d
   RNVectorIcons: a3c395829c56e2cb054a0730126298bf805a2dca
   yoga: 2418c171de153cbe3c94dc28c3bf691b1695ae17
 
-PODFILE CHECKSUM: 034124d551c09c5ea50aad40a5609cc21aeeb8eb
+PODFILE CHECKSUM: c497a62a182dce1a70bddb1568498e22e8b13e1e
 
 COCOAPODS: 1.3.1

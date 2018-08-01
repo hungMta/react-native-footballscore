@@ -61,7 +61,6 @@ class AllCompetition extends Component {
   }
 
   flexLoadmore() {
-    console.log(this.state.page);
     this.setState(
       {
         page: this.state.page + 1
@@ -85,7 +84,6 @@ class AllCompetition extends Component {
   render() {
     if (this.props.competition.allLoading) {
       if (this.props.competition.errMsg !== null) {
-        console.log(this.props.competition.errMsg);
         Alert.alert("Error", this.props.competition.errMsg, {
           cancelable: false
         });

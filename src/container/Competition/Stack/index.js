@@ -84,15 +84,9 @@ const stack = createStackNavigator(
     }
   },
   {
-    // headerMode: "screen",
     headerBackTitleVisible: false
   }
 );
 
-// function mapStateToProps(state) {
-//   return {
-//     competition: state.competition
-//   };
-// }
 
 export default stack;

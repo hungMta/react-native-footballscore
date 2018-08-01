@@ -57,3 +57,16 @@ export const NEWS_GET = "news/get";
 export const NEWS_GET_SUCCESS = "news/get/success";
 export const NEWS_GET_FAIL = "news/get/fail";
 export const NEWS_RESET = "news/reset";
+
+/**
+ * LOGIN
+ */
+export const LOGIN_REQUEST = "login/";
+export const LOGIN_CANCEL = "login/cancel";
+export const LOGIN_SUCCESS = "login/success";
+export const LOGIN_FAIL = "login/fail";
+export const CHANGE_LOGIN_STATE = "login/state";
+export const LOGOUT_REQUEST = "logout/";
+export const LOGOUT_SUCCESS = "logout/success";
+export const CHECK_LOGINED = "login/check";
+export const DOESNOT_LOGIN = "login/doesnotlogin"

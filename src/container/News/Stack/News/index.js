@@ -8,7 +8,7 @@ import {
   FlatList,
   ActivityIndicator,
   Alert,
-  Text
+  Text, BackHandler
 } from "react-native";
 import { NavigationActions } from "react-navigation";
 import { connect } from "react-redux";
@@ -38,11 +38,18 @@ class News extends Component {
 
   componentDidMount() {
     this.props.getNews();
+    BackHandler.addEventListener("hardwareBackPress", this.handleBackPress);
   }
 
   componentWillUnmount() {
+    BackHandler.removeEventListener("hardwareBackPress", this.handleBackPress);
     this.props.resetNews();
   }
+
+  handleBackPress = () => {
+    BackHandler.exitApp()
+    console.log("handleBackPress")
+  };
 
   myDot = () => {
     return <View style={styles.myDot} />;
@@ -90,7 +97,6 @@ class News extends Component {
   }
 
   flatListItemClicked(url) {
-    console.log(url);
     this.props.navigation.navigate("NewsDetail", {
       url: url
     });

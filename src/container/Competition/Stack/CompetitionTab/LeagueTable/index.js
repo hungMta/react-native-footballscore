@@ -37,7 +37,6 @@ class LeagueTable extends Component {
 
   componentDidMount() {
     const competition = this.props.navigation.getParam("competition", null);
-    console.log("competition = ", competition);
     this.props.getLeagueTable(competition.id);
   }
 
@@ -71,13 +70,11 @@ class LeagueTable extends Component {
       ];
       tableData.push(element);
     });
-    console.log("tabledata ", tableData);
     return tableData;
   }
 
   render() {
     const { leagueTable } = this.props;
-    console.log("leagueTable ##################### ", leagueTable);
     if (leagueTable.isLoading) {
       return (
         <View style={styles.container}>

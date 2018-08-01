@@ -16,12 +16,12 @@ import {
 import styles from "./style";
 import { FIXTURE_ALL_FIXTURE_RESET } from "../../../../../constants/types";
 import { delay } from "redux-saga";
+import Icon from 'react-native-vector-icons/Ionicons';
 
 class Fixtures extends Component {
   constructor(props) {
     super(props);
     var competition = this.props.navigation.getParam("competition", null);
-    console.log("props = ", competition);
     this.state = {
       allFixtures: [],
       isLoadmore: false,
@@ -232,7 +232,6 @@ class Fixtures extends Component {
   };
 
   render() {
-    console.log(this.props.data.fixtures.slice(0, this.state.page * 20).length);
     if (this.props.data.loading) {
       return (
         <View style={styles.container}>
@@ -260,12 +259,6 @@ class Fixtures extends Component {
 function mapStateToProps(state) {
   return {
     data: state.fixtures
-  };
-}
-
-function mapPropsToDispatch() {
-  return {
-    getAllFixtures: getAllFixtures
   };
 }
 

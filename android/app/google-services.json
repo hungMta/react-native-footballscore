@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "832715001431",
+    "firebase_url": "https://login-3944d.firebaseio.com",
+    "project_id": "login-3944d",
+    "storage_bucket": "login-3944d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832715001431:android:0539fda26cfd95fd",
+        "android_client_info": {
+          "package_name": "com.footballscore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "832715001431-4t9o49a1gdsev3p9hlafcd81nanlvr6c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.footballscore",
+            "certificate_hash": "4613de878203c482ff7402dcbca02df9a685d71f"
+          }
+        },
+        {
+          "client_id": "832715001431-dvl6pu7f1cvqh4ipev28mf6oh1heogqu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAArWRUNswb58IJ0YX8VB6ij3IDN-iUu_Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "832715001431-dvl6pu7f1cvqh4ipev28mf6oh1heogqu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

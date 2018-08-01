@@ -13,7 +13,6 @@
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* FootballScoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FootballScoreTests.m */; };
 		0705932F315E417483A98E55 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A50CE78372C41518DB89521 /* Entypo.ttf */; };
-		0BEB4B6C3C5A15950D9BF23E /* libPods-FootballScoreTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DEE33347294ED6CA6E200E2 /* libPods-FootballScoreTests.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -24,8 +23,8 @@
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		15F27B90FCCF47A3A8AEB5EF /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5023D7730984F5787666F5D /* Octicons.ttf */; };
-		2393B3910B08FDF9CDBC59F6 /* libPods-FootballScore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5017524041CD42A0D414628B /* libPods-FootballScore.a */; };
 		265996747BF44E8B82D60D09 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 125083E136394F13A9B36CBE /* libBVLinearGradient.a */; };
+		29309690576414CF546A6F1D /* libPods-FootballScore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE76D912E03D64AC33FD35B1 /* libPods-FootballScore.a */; };
 		2A78AE49508447C68D75C090 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 917D1B6A7C5B4CF9B7A8BFAE /* FontAwesome.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -41,18 +40,26 @@
 		2DCD954D1E0B4F2C00145EB5 /* FootballScoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FootballScoreTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		41E2516301DB425BBEA26052 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71FC6FC41B02445BA7C1C432 /* EvilIcons.ttf */; };
+		48A817E574154167B9BD72DF /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F45ADDCE8146DDA379651F /* libRNFirebase.a */; };
 		54178AD0C8464C77A76FF55C /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B7D0DA468554108AD54B86C /* Feather.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		6FBE67AA074B465FAAB2C2DC /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E16D279D2EF477FA6F64CBD /* MaterialCommunityIcons.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		85203B9E210ECAAE0083D9D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85203B9D210ECAAE0083D9D5 /* GoogleService-Info.plist */; };
 		8531BFD22108218B00FF0A45 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8531BFD02108207500FF0A45 /* libRNImagePicker.a */; };
 		8AA7540670914B808CD55980 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF35109465C84EAFA05C918B /* Ionicons.ttf */; };
 		99CE56B07BA84C29B12A6F7A /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F88892381D4F71ACC4A9E6 /* Foundation.ttf */; };
 		A5A8C3DC24AC468586CF1465 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6981D24DFE19482BA2FE168C /* MaterialIcons.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		B255D242A3CE1BB5B05CAFDF /* libPods-FootballScoreTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5258C48B8C05D192904E10AA /* libPods-FootballScoreTests.a */; };
 		B8865AC7FB30480483259BBE /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40DCD332B2D247A2A4F4FB0D /* Zocial.ttf */; };
 		BB50930EA6164C929FA65F5A /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A24FAA0DDD3D4501B3F782B9 /* SimpleLineIcons.ttf */; };
-		BC85C700343EE10C6D05C787 /* libPods-FootballScore-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59359A817E23C0ACC5B6AD30 /* libPods-FootballScore-tvOSTests.a */; };
+		E9E2BCA872380E8CC1047D1E /* libPods-FootballScore-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6196C91535751E44BF3EE97 /* libPods-FootballScore-tvOSTests.a */; };
+		74AF404749104750911C1706 /* libRNGoogleSignin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74845603E3864FB58678240A /* libRNGoogleSignin.a */; };
+		1941EC04D5584741BCD99C06 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D392DCA16E449E8BF1D352 /* libz.tbd */; };
+		30C8A0EEEA7A446E9DBF7D68 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EC78B410D346E99B7F23AF /* SafariServices.framework */; };
+		00B9094B7AE0414494B45F02 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA826E4FEBAE4974AEBD0151 /* SystemConfiguration.framework */; };
+		BD31D332973844018A8C7FA9 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4286CF51638941EE835EE34D /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -322,6 +329,13 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		85203B9B210EC9CE0083D9D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CDF254EA88D477883D60CF8 /* RNFirebase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNFirebase;
+		};
 		8531BFCF2108207500FF0A45 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8531BFA42108207500FF0A45 /* RNImagePicker.xcodeproj */;
@@ -373,14 +387,13 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FootballScore/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FootballScore/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		2CDF254EA88D477883D60CF8 /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFirebase.xcodeproj; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* FootballScore-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FootballScore-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* FootballScore-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FootballScore-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DEE33347294ED6CA6E200E2 /* libPods-FootballScoreTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FootballScoreTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40DCD332B2D247A2A4F4FB0D /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		4E16D279D2EF477FA6F64CBD /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
-		5017524041CD42A0D414628B /* libPods-FootballScore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FootballScore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		59359A817E23C0ACC5B6AD30 /* libPods-FootballScore-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FootballScore-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5258C48B8C05D192904E10AA /* libPods-FootballScoreTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FootballScoreTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		6900CC0BBF53940C93E4BB1C /* Pods-FootballScore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballScore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootballScore/Pods-FootballScore.debug.xcconfig"; sourceTree = "<group>"; };
 		6981D24DFE19482BA2FE168C /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
@@ -388,8 +401,10 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8417BE294B8F4C2AEA5C72B9 /* Pods-FootballScore-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballScore-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootballScore-tvOSTests/Pods-FootballScore-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		85203B9D210ECAAE0083D9D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8531BFA42108207500FF0A45 /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNImagePicker.xcodeproj; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; };
 		88F88892381D4F71ACC4A9E6 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		89F45ADDCE8146DDA379651F /* libRNFirebase.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFirebase.a; sourceTree = "<group>"; };
 		8A50CE78372C41518DB89521 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		8B7D0DA468554108AD54B86C /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		917D1B6A7C5B4CF9B7A8BFAE /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
@@ -397,11 +412,19 @@
 		AB4AEA98504D406D9968FBCF /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		AF35109465C84EAFA05C918B /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		BE76D912E03D64AC33FD35B1 /* libPods-FootballScore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FootballScore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5023D7730984F5787666F5D /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		D6196C91535751E44BF3EE97 /* libPods-FootballScore-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FootballScore-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3ACBB22919C6669AC59D2EE /* Pods-FootballScore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballScore.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootballScore/Pods-FootballScore.release.xcconfig"; sourceTree = "<group>"; };
 		E5A5E037D9387494554EB67C /* Pods-FootballScoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballScoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootballScoreTests/Pods-FootballScoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		E6AD979C606CD74878D08F3F /* Pods-FootballScore-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballScore-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootballScore-tvOSTests/Pods-FootballScore-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3606DA6F66DA53CFFBE0C14 /* Pods-FootballScoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballScoreTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootballScoreTests/Pods-FootballScoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E8DD6C1EFFE4C0483AD3624 /* RNGoogleSignin.xcodeproj */ = {isa = PBXFileReference; name = "RNGoogleSignin.xcodeproj"; path = "../node_modules/react-native-google-signin/ios/RNGoogleSignin.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		74845603E3864FB58678240A /* libRNGoogleSignin.a */ = {isa = PBXFileReference; name = "libRNGoogleSignin.a"; path = "libRNGoogleSignin.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		E3D392DCA16E449E8BF1D352 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		F6EC78B410D346E99B7F23AF /* SafariServices.framework */ = {isa = PBXFileReference; name = "SafariServices.framework"; path = "System/Library/Frameworks/SafariServices.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		BA826E4FEBAE4974AEBD0151 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		4286CF51638941EE835EE34D /* AddressBook.framework */ = {isa = PBXFileReference; name = "AddressBook.framework"; path = "System/Library/Frameworks/AddressBook.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,7 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
-				0BEB4B6C3C5A15950D9BF23E /* libPods-FootballScoreTests.a in Frameworks */,
+				B255D242A3CE1BB5B05CAFDF /* libPods-FootballScoreTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +456,13 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				265996747BF44E8B82D60D09 /* libBVLinearGradient.a in Frameworks */,
-				2393B3910B08FDF9CDBC59F6 /* libPods-FootballScore.a in Frameworks */,
+				29309690576414CF546A6F1D /* libPods-FootballScore.a in Frameworks */,
+				48A817E574154167B9BD72DF /* libRNFirebase.a in Frameworks */,
+				74AF404749104750911C1706 /* libRNGoogleSignin.a in Frameworks */,
+				1941EC04D5584741BCD99C06 /* libz.tbd in Frameworks */,
+				30C8A0EEEA7A446E9DBF7D68 /* SafariServices.framework in Frameworks */,
+				00B9094B7AE0414494B45F02 /* SystemConfiguration.framework in Frameworks */,
+				BD31D332973844018A8C7FA9 /* AddressBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */,
-				BC85C700343EE10C6D05C787 /* libPods-FootballScore-tvOSTests.a in Frameworks */,
+				E9E2BCA872380E8CC1047D1E /* libPods-FootballScore-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +581,7 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				85203B9D210ECAAE0083D9D5 /* GoogleService-Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = FootballScore;
@@ -584,9 +614,13 @@
 			isa = PBXGroup;
 			children = (
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
-				5017524041CD42A0D414628B /* libPods-FootballScore.a */,
-				59359A817E23C0ACC5B6AD30 /* libPods-FootballScore-tvOSTests.a */,
-				3DEE33347294ED6CA6E200E2 /* libPods-FootballScoreTests.a */,
+				BE76D912E03D64AC33FD35B1 /* libPods-FootballScore.a */,
+				D6196C91535751E44BF3EE97 /* libPods-FootballScore-tvOSTests.a */,
+				5258C48B8C05D192904E10AA /* libPods-FootballScoreTests.a */,
+				E3D392DCA16E449E8BF1D352 /* libz.tbd */,
+				F6EC78B410D346E99B7F23AF /* SafariServices.framework */,
+				BA826E4FEBAE4974AEBD0151 /* SystemConfiguration.framework */,
+				4286CF51638941EE835EE34D /* AddressBook.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -644,6 +678,8 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				AB4AEA98504D406D9968FBCF /* BVLinearGradient.xcodeproj */,
+				2CDF254EA88D477883D60CF8 /* RNFirebase.xcodeproj */,
+				6E8DD6C1EFFE4C0483AD3624 /* RNGoogleSignin.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -685,6 +721,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		85203B98210EC9CE0083D9D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85203B9C210EC9CE0083D9D5 /* libRNFirebase.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		8531BFA52108207500FF0A45 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -697,6 +741,7 @@
 			isa = PBXGroup;
 			children = (
 				125083E136394F13A9B36CBE /* libBVLinearGradient.a */,
+				89F45ADDCE8146DDA379651F /* libRNFirebase.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -903,6 +948,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = 85203B98210EC9CE0083D9D5 /* Products */;
+					ProjectRef = 2CDF254EA88D477883D60CF8 /* RNFirebase.xcodeproj */;
 				},
 				{
 					ProductGroup = 8531BFA52108207500FF0A45 /* Products */;
@@ -1172,6 +1221,13 @@
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		85203B9C210EC9CE0083D9D5 /* libRNFirebase.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNFirebase.a;
+			remoteRef = 85203B9B210EC9CE0083D9D5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		8531BFD02108207500FF0A45 /* libRNImagePicker.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1227,6 +1283,7 @@
 				15F27B90FCCF47A3A8AEB5EF /* Octicons.ttf in Resources */,
 				BB50930EA6164C929FA65F5A /* SimpleLineIcons.ttf in Resources */,
 				B8865AC7FB30480483259BBE /* Zocial.ttf in Resources */,
+				85203B9E210ECAAE0083D9D5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1268,9 +1325,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FootballScore/Pods-FootballScore-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BVLinearGradient/BVLinearGradient.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RNVectorIcons/RNVectorIcons.framework",
+				"${BUILT_PRODUCTS_DIR}/React/React.framework",
+				"${BUILT_PRODUCTS_DIR}/yoga/yoga.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BVLinearGradient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNVectorIcons.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1404,9 +1472,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FootballScore-tvOSTests/Pods-FootballScore-tvOSTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RNVectorIcons/RNVectorIcons.framework",
+				"${BUILT_PRODUCTS_DIR}/React/React.framework",
+				"${BUILT_PRODUCTS_DIR}/yoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/react-native-image-picker/react_native_image_picker.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNVectorIcons.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/react_native_image_picker.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1523,12 +1600,16 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin/**",
 				);
 				INFOPLIST_FILE = FootballScoreTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1549,12 +1630,16 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin/**",
 				);
 				INFOPLIST_FILE = FootballScoreTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1576,6 +1661,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin/**",
 				);
 				INFOPLIST_FILE = FootballScore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1598,6 +1685,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin/**",
 				);
 				INFOPLIST_FILE = FootballScore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1626,11 +1715,15 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin/**",
 				);
 				INFOPLIST_FILE = "FootballScore-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1660,11 +1753,15 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin/**",
 				);
 				INFOPLIST_FILE = "FootballScore-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1694,11 +1791,15 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin/**",
 				);
 				INFOPLIST_FILE = "FootballScore-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1728,11 +1829,15 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin/**",
 				);
 				INFOPLIST_FILE = "FootballScore-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (

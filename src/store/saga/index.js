@@ -4,12 +4,20 @@ import { watchGetAllCompetititon } from "./competition";
 import { watchGetAllFixtures } from "./fixture";
 import { watchGetNews } from "./news";
 import { watchGetLeagueTable } from "./leagueTable";
+import {
+  watchLoginRequest,
+  watchLogoutRequest,
+  watchCheckLogined
+} from "./login";
 
 export default function* rootSaga() {
   yield all([
     watchGetAllCompetititon(),
     watchGetAllFixtures(),
     watchGetNews(),
-    watchGetLeagueTable()
+    watchGetLeagueTable(),
+    watchLoginRequest(),
+    watchLogoutRequest(),
+    watchCheckLogined()
   ]);
 }

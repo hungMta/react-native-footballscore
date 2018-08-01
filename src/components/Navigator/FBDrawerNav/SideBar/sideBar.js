@@ -8,7 +8,8 @@ import {
   Text,
   Image,
   Modal,
-  Platform
+  Platform,
+  AsyncStorage
 } from "react-native";
 import {
   DrawerActions,
@@ -17,14 +18,17 @@ import {
 } from "react-navigation";
 import { connect } from "react-redux";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import SimplestIcon from "react-native-vector-icons/SimpleLineIcons";
 import styles from "./style";
 import option from "./option";
 import images from "../../../../../assets/images/index";
+import { logoutRequest } from "../../../../store/action/login";
+import { PROFILE } from "../../../../constants/key";
 const ImagePicker = require("react-native-image-picker");
 const options = {
   storageOptions: {
     skipBackup: true,
-    path: 'images'
+    path: "images"
   }
 };
 class Header extends Component {
@@ -38,10 +42,7 @@ class Header extends Component {
   }
 
   chooseImage = () => {
-    console.log(ImagePicker);
     ImagePicker.showImagePicker({}, response => {
-      console.log("Response = ", response);
-
       if (response.didCancel) {
         console.log("User cancelled image picker");
       } else if (response.error) {
@@ -76,7 +77,7 @@ class Header extends Component {
     });
     this.setState({
       pickerDialogVisbile: false
-    })
+    });
   };
 
   showPickerDialogAndroid = () => {
@@ -98,11 +99,18 @@ class Header extends Component {
           style={styles.avatar}
           onPress={() => this.showPickerDialogAndroid()}
         >
-          <Image source={this.state.avatarSource} style={styles.drawerImage} />
+          <Image
+            source={{ uri: this.props.profile.picture }}
+            style={styles.drawerImage}
+          />
         </TouchableOpacity>
         <View style={{ alignItems: "center" }}>
-          <Text style={{ color: "white" }}>Eddy</Text>
-          <Text style={{ color: "white" }}>Eddy@email.com</Text>
+          <Text style={{ color: "white" }}>
+            {this.props.profile.family_name +
+              " " +
+              this.props.profile.given_name}
+          </Text>
+          <Text style={{ color: "white" }}>{this.props.profile.email}</Text>
         </View>
         {Platform.OS === "android" && (
           <Modal
@@ -198,6 +206,15 @@ class SideBar extends Component {
     this.props.navigation.closeDrawer();
   }
 
+  logout() {
+    console.log("logout");
+    const navigateAction = StackActions.reset({
+      index: 0,
+      actions: [NavigationActions.navigate({ routeName: "Login" })]
+    });
+    this.props.navigation.navigate("Login");
+  }
+
   sideBarItem = (item, index) => {
     return (
       <View key={index}>
@@ -217,16 +234,65 @@ class SideBar extends Component {
 
   sideBarKeyExtractor = (item, index) => item.id;
 
+  _retrieveData = async () => {
+    console.log("retrieveData");
+    try {
+      const value = await AsyncStorage.getItem(PROFILE)
+        .then(value => {
+          console.log("then value", value);
+          return value;
+        })
+        .catch(error => {
+          console.log("then error", error);
+          return error;
+        });
+      console.log("value ", value);
+      if (value !== null) {
+        // We have data!!
+      }
+    } catch (error) {
+      console.log("error ", error);
+      // Error retrieving data
+    }
+  };
+
   render() {
+    // console.log("this.props.auth ", this.props.auth);
+    // this._retrieveData();
+    if (this.props.auth.logoutSuccess) {
+      this.logout();
+    }
     return (
       <View style={[styles.primaryColor, styles.flex_1]}>
-        <Header />
+        <Header profile={this.props.auth.profile} />
         <View style={styles.listItemContainer}>
           {option.listItems.map((item, index) => this.sideBarItem(item, index))}
+          <View style={styles.itemContanier} />
+          <View
+            style={{ height: 0.5, width: "100%", backgroundColor: "white" }}
+          />
+          <TouchableOpacity
+            style={styles.itemContanier}
+            onPress={() => this.props.logoutRequest()}
+          >
+            <SimplestIcon name="logout" color="white" size={25} />
+            <Text style={{ color: "white", marginLeft: 20 }}>Logout</Text>
+          </TouchableOpacity>
+          <View
+            style={{ height: 0.5, width: "100%", backgroundColor: "white" }}
+          />
         </View>
       </View>
     );
   }
 }
 
-export default SideBar;
+function mapStateToProps(state) {
+  return {
+    auth: state.auth
+  };
+}
+export default connect(
+  mapStateToProps,
+  { logoutRequest }
+)(SideBar);
