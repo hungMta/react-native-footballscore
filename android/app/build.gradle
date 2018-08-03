@@ -143,7 +143,7 @@ dependencies {
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-linear-gradient')
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "com.android.support:appcompat-v7:26.0.1"
+    implementation "com.android.support:appcompat-v7:26.1.0"
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation project(':react-native-image-picker')
 //    implementation 'com.google.firebase:firebase-core:16.0.1'

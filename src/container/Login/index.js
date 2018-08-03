@@ -92,6 +92,7 @@ class Login extends Component {
             style={styles.textInput}
             marginTop={10}
             height={40}
+            underlineColorAndroid='transparent'
           />
 
           <TextInput
@@ -101,6 +102,7 @@ class Login extends Component {
             style={styles.textInput}
             marginTop={20}
             height={40}
+            underlineColorAndroid='transparent'
           />
         </View>
         <KeyboardAvoidingView
