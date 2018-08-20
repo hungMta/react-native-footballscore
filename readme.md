@@ -5,5 +5,5 @@
 If you are building on windown let check out branch `windown`
 
 # How to build
-`npm install`
-`react-native run-ios` or `react-native run-android`
+1. `npm install`
+2. `react-native run-ios` or `react-native run-android`
