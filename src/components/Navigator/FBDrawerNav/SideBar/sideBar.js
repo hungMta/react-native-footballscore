@@ -36,7 +36,7 @@ class Header extends Component {
     super(props);
 
     this.state = {
-      avatarSource: images.avatar,
+      avatarSource: "",
       pickerDialogVisbile: false
     };
   }
@@ -50,6 +50,7 @@ class Header extends Component {
       } else if (response.customButton) {
         console.log("User tapped custom button: ", response.customButton);
       } else {
+        console.log("response ", response);
         let source = { uri: response.uri };
         this.setState({
           avatarSource: source
@@ -60,8 +61,6 @@ class Header extends Component {
 
   pickImageFromGalery = () => {
     ImagePicker.launchImageLibrary(options, response => {
-      console.log("Response = ", response);
-
       if (response.didCancel) {
         console.log("User cancelled image picker");
       } else if (response.error) {
@@ -69,6 +68,7 @@ class Header extends Component {
       } else if (response.customButton) {
         console.log("User tapped custom button: ", response.customButton);
       } else {
+        console.log("ImagePicker success");
         let source = { uri: response.uri };
         this.setState({
           avatarSource: source
@@ -91,7 +91,10 @@ class Header extends Component {
     }
   };
 
+
+
   render() {
+    console.log("avataSource: ", this.state.avatarSource);
     return (
       <View style={styles.header}>
         <View />
@@ -100,7 +103,7 @@ class Header extends Component {
           onPress={() => this.showPickerDialogAndroid()}
         >
           <Image
-            source={{ uri: this.props.profile.picture }}
+            source={this.state.avatarSource == "" ? { uri: this.props.profile.picture } : this.state.avatarSource}
             style={styles.drawerImage}
           />
         </TouchableOpacity>
@@ -208,12 +211,12 @@ class SideBar extends Component {
 
   logout() {
     console.log("logout");
-    const navigateAction = StackActions.reset({
-      index: 0,
-      actions: [NavigationActions.navigate({ routeName: "Login" })]
+    const popAction = StackActions.pop({
+      n: 1,
     });
-    // this.props.navigation.navigate("Login");
-    this.props.screenProps.rootNavigation.navigate('Login');
+
+    // this.props.screenProps.rootNavigation.navigate('Login');
+    this.props.screenProps.rootNavigation.dispatch(popAction);
   }
 
   sideBarItem = (item, index) => {
