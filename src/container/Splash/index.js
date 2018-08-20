@@ -20,7 +20,7 @@ class Splash extends Component {
         this.props.checkLogined();
         break;
       case 1:
-        this.props.navigation.navigate("News");
+        this.props.navigation.navigate("Drawer");
         break;
     }
     return <View style={styles.primaryDarkColor} flex={1} />;

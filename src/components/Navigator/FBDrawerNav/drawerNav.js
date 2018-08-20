@@ -21,22 +21,22 @@ const drawer = createDrawerNavigator(
       })
     },
     About: AboutStack,
-    Login: {
-      screen: Login,
-      navigationOptions: () => ({
-        header: null
-      })
-    },
-    Splash: {
-      screen: Splash,
-      navigationOptions: () => ({
-        header: null
-      })
-    }
+    // Login: {
+    //   screen: Login,
+    //   navigationOptions: () => ({
+    //     header: null
+    //   })
+    // },
+    // Splash: {
+    //   screen: Splash,
+    //   navigationOptions: () => ({
+    //     header: null
+    //   })
+    // }
   },
   {
     contentComponent: SideBar,
-    initialRouteName: "Splash"
+    initialRouteName: "News"
   }
 );
 

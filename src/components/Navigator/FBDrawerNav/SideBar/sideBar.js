@@ -212,7 +212,8 @@ class SideBar extends Component {
       index: 0,
       actions: [NavigationActions.navigate({ routeName: "Login" })]
     });
-    this.props.navigation.navigate("Login");
+    // this.props.navigation.navigate("Login");
+    this.props.screenProps.rootNavigation.navigate('Login');
   }
 
   sideBarItem = (item, index) => {

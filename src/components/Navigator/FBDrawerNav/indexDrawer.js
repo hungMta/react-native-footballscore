@@ -4,7 +4,16 @@ import { connect } from "react-redux";
 import DrawerNav from "./drawerNav";
 
 class FBStackNav extends Component {
+
+  constructor(props) {
+    super(props);
+    console.log("FBSTACK NAV", this.props.navigation);
+  }
+
+
+
   render() {
+    console.log("FBSTACK NAV", this.props.navigation);
     return <DrawerNav screenProps={{ rootNavigation: this.props.navigation }} />;
   }
 }

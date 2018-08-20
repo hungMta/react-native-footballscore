@@ -3,10 +3,11 @@ import { View, Text } from "react-native";
 import { Provider, connect } from "react-redux";
 import {configStore} from "./store/index";
 import DrawerNavigation from "./components/Navigator/FBDrawerNav/drawerNav";
+import StackNav from "./components/Navigator/FBDrawerNav/stackNav";
 
 class Main extends Component {
   render() {
-    return <DrawerNavigation />;
+    return <StackNav />;
   }
 }
 
