@@ -8,3 +8,6 @@ If you are building on window let check out `window`branch.
 2. `react-native run-ios` or `react-native run-android`
 
 #https://hacktoberfest.digitalocean.com/stats/EnvityStudio
+
+
+#Hacktoberfest2019 =))
